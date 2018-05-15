@@ -60,6 +60,10 @@ const addTask = () =>{
     let newItems= [];
    const name = document.getElementById('nameBox').value;
    const qty = document.getElementById('qtyBox').value;
+   if(name === "" || qty === ""){
+    alert("Please Enter correct values!");
+    return;
+   }
    const id = Math.floor(Math.random() * 100 +5);
 
     console.log("name: ",name, "qty:",qty);
@@ -119,10 +123,18 @@ const handleChecked = (e) => {
 
 function toggleContents(){
     let table = document.getElementById('DoneTable');
+    let font = document.createElement("i");
+    let label = document.getElementById('completedList');
     if (document.getElementById('DoneTable').style.visibility == "visible") {
         document.getElementById('DoneTable').style.visibility = "hidden";
+        font.className="arrow fa fa-angle-up";
+        label.lastChild.remove();
+        label.appendChild(font);
     } else {
         document.getElementById('DoneTable').style.visibility = "visible";
+        font.className="arrow fa fa-angle-down";
+        label.lastChild.remove();
+        label.appendChild(font);
     }
 }
  

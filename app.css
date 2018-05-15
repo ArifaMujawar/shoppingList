@@ -102,3 +102,15 @@ hr{
     padding: 10px;
     margin: 10px;
 }
+#completedList{
+    cursor: pointer;
+}
+
+#completedList :after{
+    cursor: progress;
+    display: block;
+}
+.arrow {
+    margin: 10px;
+    padding: 10px;
+}
