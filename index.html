@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
     <title>To-Do-List</title>
 </head>
 <body onload="loadData()">
     <div class="container">
         <div class="addItems">
-            <input id="nameBox" type="text">
-            <input id="qtyBox" type="text">
+            <input id="nameBox" class="addItem" placeholder="Item" type="text">
+            <input id="qtyBox" class="addItem" placeholder="Quantity"  type="text">
             <button id="addItemButton" onclick = "addTask()">Add</button>
         </div>
         <div class="displayItems">
+                <h3>Shopping List</h3>
+                <hr>
             <table id="table">
                 <tr>
                     <th>
@@ -27,6 +30,12 @@
                 </tr>
                 
             </table>
+        </div>
+        <h3 style="cursor: grab;" onclick="toggleContents()">Done List</h3>
+        <hr>
+        <div id="DoneTable">
+            
+           
         </div>
     </div>
 </body>
