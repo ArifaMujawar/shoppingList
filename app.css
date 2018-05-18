@@ -13,34 +13,49 @@ body{
     margin: 20px;
 }
 .addItems{
-    background: pink;
+    background: rgb(124, 198, 248);
     padding: 10px;
     display: flex;
     justify-content: space-around;
 }
+input::placeholder{
+    font-style: italic;
+    color:white;
+    font-size: 12px;
+}
 #nameBox, #qtyBox{
     border: none;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     flex-grow: 1;
-    border-radius: 15px;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    /* border-radius: 15px; */
 }
 #addItemButton{
-    padding: 0px 20px;
+    padding: 0px 15px;
+    border: none;
     border-radius: 50%;
     height: 40px;
     margin: 10px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 30px;
     font-style: italic;
+    color:white;
+    background: transparent;
 }
 .displayItems{
-    background: lightblue;
+    background: rgb(193, 224, 245);
 }
 table{
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+}
+.doneItems{
+    background: white;
+    color: rgb(124, 198, 248);
 }
 #DoneTable table{
     font-family: arial, sans-serif;
@@ -50,18 +65,18 @@ table{
     border-spacing: 10px; 
     margin:0px -30px;
     text-decoration:line-through;
-    
+    color:rgb(124, 198, 248);
 }
 #DoneTable{
     margin: 20px;
     padding: 2px;
     color: gray;
-    
+    visibility: hidden;
 }
 tr {
     /* border: 1px solid #dddddd; */
     border: none;
-    
+    border-bottom: 1px solid white;
     /* font-size:2px; */
     text-align: left;
     /* padding: 8px;
@@ -84,8 +99,8 @@ td, th{
 .checkbox{
     padding: 10px;
     margin: 30px 70px;
-    
 }
+
 h3{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -120,7 +135,52 @@ hr{
 button {
     font-weight: bold;
 }
-
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top:100px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0,0,0);  
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin:auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+}
+#uncheckAll, #removechecked{
+    padding: 10px;
+    border-radius: 15px;
+    background: rgb(154, 207, 243);
+    color: white;
+}
+/* #removechecked{
+    padding: 20px;
+    border-radius: 15px;
+    background: #888;
+} */
 @media only screen and (max-width:600px){
     .checkbox{
         margin: 10px;
