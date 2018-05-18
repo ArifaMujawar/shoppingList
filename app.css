@@ -57,7 +57,7 @@ table{
     background: white;
     color: rgb(124, 198, 248);
 }
-#DoneTable table{
+#DoneTable {
     font-family: arial, sans-serif;
     border-collapse: separate;
     width: 100%;
